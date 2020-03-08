@@ -32,6 +32,7 @@ public class ApplicationConfig extends Application
      */
     private void addRestResourceClasses(Set<Class<?>> resources)
     {
+        resources.add(service.BusinessFacadeREST.class);
         resources.add(services.GenericResource.class);
         resources.add(services.login.class);
     }
