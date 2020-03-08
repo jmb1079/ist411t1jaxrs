@@ -8,8 +8,8 @@ package services;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.Produces;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
@@ -17,11 +17,10 @@ import javax.ws.rs.PUT;
 /**
  * REST Web Service
  *
- * @author James Bristow <jmb1079@psu.edu>
+ * @author JamesBr
  */
 @Path("generic")
-public class GenericResource
-{
+public class GenericResource {
 
     @Context
     private UriInfo context;
@@ -29,8 +28,7 @@ public class GenericResource
     /**
      * Creates a new instance of GenericResource
      */
-    public GenericResource()
-    {
+    public GenericResource() {
     }
 
     /**
@@ -39,9 +37,9 @@ public class GenericResource
      */
     @GET
     @Produces("text/html")
-    public String getHtml()
-    {
-        return "<html lang=\"en\"><body><h1>Hello, World!!</body></h1></html>";
+    public String getHtml() {
+        //TODO return proper representation object
+        throw new UnsupportedOperationException();
     }
 
     /**
@@ -51,7 +49,6 @@ public class GenericResource
      */
     @PUT
     @Consumes("text/html")
-    public void putHtml(String content)
-    {
+    public void putHtml(String content) {
     }
 }
