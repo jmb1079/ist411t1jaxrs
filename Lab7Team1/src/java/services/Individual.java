@@ -10,6 +10,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
@@ -20,6 +22,7 @@ import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
@@ -56,14 +59,18 @@ public class Individual {
     @GET
     @Produces("text/html")
     public String getHtml() throws IOException {
+        return getAllIndividuals().toString();
+    }
+
+    private JsonObject getAllIndividuals() {
         String file = "IndividualData.json";
         try (JsonReader jsonReader = Json.createReader(getClass().getResource(file).openStream())) {
             JsonObject individualData = jsonReader.readObject();
-            return individualData.toString();
+            return individualData;
         } catch (IOException ioEx) {
             System.out.println("Could not read file");
         }
-        return "";
+        return null;
     }
 
     /**
@@ -74,15 +81,31 @@ public class Individual {
      */
     @PUT
     @Consumes("text/html")
-    public void updateIndividualDetails(String content)
+    public void updateIndividualDetails(String content) 
     {
-        try (InputStream stream = new ByteArrayInputStream(content.getBytes()))
-        {
+        try (InputStream stream = new ByteArrayInputStream(content.getBytes())) {
             JsonReader reader = Json.createReader(stream);
+            ArrayList<String> keys = new ArrayList<>(Arrays.asList("id", "fname", "lname", "state", "longitude", "latitude"));
+            for (String key : keys) 
+            {
+                if (true)//)!reader.readObject().keySet()) 
+                {
+                    
+                }
+                if (true)//reader.readObject().containsKey())
+                {}
+            }
+            JsonObject allIndividuals = getAllIndividuals();
+
+        } catch (IOException ioEx) {
+
         }
-        catch (IOException ioEx)
-        {
-            
-        }
+    }
+    
+    @DELETE
+    @Produces("text/html")
+    public String deleteIndividual(int id)
+    {
+        return "deleted";
     }
 }
