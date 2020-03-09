@@ -28,7 +28,6 @@ import services.Business;
 @Path("services.business")
 public class BusinessFacadeREST extends AbstractFacade<Business>
 {
-    ArrayList<Business> business = new ArrayList<>();
     @PersistenceContext(unitName = "Lab7Team1PU")
     private EntityManager em;
 

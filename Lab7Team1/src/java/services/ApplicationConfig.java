@@ -34,7 +34,7 @@ public class ApplicationConfig extends Application
     {
         resources.add(service.BusinessFacadeREST.class);
         resources.add(services.GenericResource.class);
-        resources.add(services.login.class);
+        resources.add(services.Individual.class);
     }
     
 }
