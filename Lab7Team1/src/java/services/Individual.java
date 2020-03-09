@@ -5,12 +5,15 @@
  */
 package services;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
+import javax.json.JsonObjectBuilder;
 import javax.json.JsonReader;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
@@ -69,10 +72,17 @@ public class Individual {
      * @param content representation for the resource
      * @return an HTTP response with content of the updated or created resource.
      */
-//    @PUT
-//    @Path("{individualid}")
-//    @Consumes("text/html")
-//    public void updateIndividualDetails(String content)
-//    {
-//    }
+    @PUT
+    @Consumes("text/html")
+    public void updateIndividualDetails(String content)
+    {
+        try (InputStream stream = new ByteArrayInputStream(content.getBytes()))
+        {
+            JsonReader reader = Json.createReader(stream);
+        }
+        catch (IOException ioEx)
+        {
+            
+        }
+    }
 }

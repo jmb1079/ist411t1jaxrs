@@ -1,6 +1,7 @@
 {
     "individual": [
         {
+            "id":0,
             "fname":"Achak",
             "lname":"Littlethunder",
             "state":"NM",
@@ -8,6 +9,7 @@
             "latitude":"35.22.05.6"
         },
         {
+            "id":1,
             "fname":"Shako",
             "lname":"Waupoose",
             "state":"AZ",
@@ -15,6 +17,7 @@
             "latitude":"35.21.47.1"
         },
         {
+            "id":2,
             "fname":"Taborri",
             "lname":"Raines",
             "state":"NM",
@@ -22,6 +25,7 @@
             "latitude":"36.46.56.3"
         },
         {
+            "id":3,
             "fname":"Koko",
             "lname":"Poorbear",
             "state":"CA",
@@ -29,24 +33,28 @@
             "latitude":"40.21.12.1"
         },
         {
+            "id":4,
             "fname":"Kangee",
             "lname":"Gouge",
             "state":"CO",
             "longitude":"-108.45.38.9",
             "latitude":"37.01.10.2"},
         {
+            "id":5,
             "fname":"Dyani",
             "lname":"Blackwolf",
             "state":"CA",
             "longitude":"-115.18.36.7",
             "latitude":"35.20.26.6"},
         {
+            "id":6,
             "fname":"Meturato",
             "lname":"Blaylock",
             "state":"AZ",
             "longitude":"-109.42.29.5",
             "latitude":"35.47.32.4"},
         {
+            "id":7,
             "fname":"Bornbazine",
             "lname":"Goff",
             "state":"AZ",
