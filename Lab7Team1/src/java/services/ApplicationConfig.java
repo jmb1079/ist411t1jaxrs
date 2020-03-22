@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package services;
+package Services;
 
 import java.util.Set;
 import javax.ws.rs.core.Application;
@@ -32,8 +32,7 @@ public class ApplicationConfig extends Application
      */
     private void addRestResourceClasses(Set<Class<?>> resources)
     {
-        resources.add(service.BusinessFacadeREST.class);
-        resources.add(services.Individual.class);
+        resources.add(Services.IndividualFacadeREST.class);
     }
     
 }
