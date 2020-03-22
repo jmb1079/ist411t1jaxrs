@@ -1,17 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/* 
+Project: Lab 7
+Purpose Details: Client-Server capitalization application
+Course: IST 411
+Author: James Bristow, Alba Beqo, Frederick Aaron, Logan Pratt, Ryan Urbanski
+Date Developed: 3/20/2020
+Last Date Changed:3/22/2020
+Revision: 6
+*/
 package Services;
 
 import java.util.List;
 import javax.persistence.EntityManager;
 
-/**
- *
- * @author James Bristow <jmb1079@psu.edu>
- */
 public abstract class AbstractFacade<T>
 {
     private Class<T> entityClass;
